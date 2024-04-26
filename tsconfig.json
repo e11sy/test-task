@@ -14,7 +14,7 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "declaration": true,
-    "declarationDir": "./dist/types",
+    "declarationDir": "public/types",
 
     /* Bundler mode */
     "forceConsistentCasingInFileNames": true,
