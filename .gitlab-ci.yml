@@ -1,0 +1,15 @@
+# .gitlab-ci.yml файл расположен в корневом каталоге репозитория
+
+pages:
+  image: node:latest
+  stage: deploy
+  script:
+    - npm ci
+    - npm run build
+    - mv public public-vue # GitLab Pages хук для каталога public
+    - mv dist public # переименование каталога dist
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
